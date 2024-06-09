@@ -27,22 +27,29 @@
   <numberAllowedLength>Variable</numberAllowedLength>
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ПродажаБилета.Form.ФормаДокумента</defaultObjectForm>
   <registerRecords>AccumulationRegister.АктивныеПосещения</registerRecords>
   <registerRecords>AccumulationRegister.Продажи</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
-  <attributes uuid="69e7935b-d221-4bc5-8a15-563fb556d253">
-    <name>Аттрацион</name>
+  <attributes uuid="1c96aaac-a632-4a5d-a177-1ccf7de51ef3">
+    <name>Номенклатура</name>
     <synonym>
       <key>ru</key>
-      <value>Аттрацион</value>
+      <value>Номенклатура</value>
     </synonym>
     <type>
-      <types>CatalogRef.Аттракционы</types>
+      <types>CatalogRef.Номенклатура</types>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
+    <choiceParameters>
+      <name>Отбор.ВидНоменклатуры</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ВидНоменклатуры.EnumValue.ПосещениеАттракциона</value>
+      </value>
+    </choiceParameters>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
@@ -68,6 +75,15 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <forms uuid="1c22be71-f8a8-46ef-aaca-2b8534849556">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
   <templates uuid="0f859c99-efd9-4399-808c-9dfb3e20e65e">
     <name>Билет</name>
   </templates>
